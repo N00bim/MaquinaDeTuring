@@ -10,14 +10,14 @@ public class Main {
             //return;
         }
 
-        //String json = args[0];
-        //String arquivoEntrada = args[1];
+        String json = args[0];
+        String arquivoEntrada = args[1];
 
         // Nome do arquivo de saída
-        File entradaFile = new File("D:\\downloads\\duplobal3.in");
+        File entradaFile = new File(arquivoEntrada);
         String nomeSaida = "saida" + entradaFile.getName().replaceAll("\\..*$", "") + ".txt";
 
-        Maquina maquina = new Maquina("D:\\downloads\\duplo_bal.json");
+        Maquina maquina = new Maquina(json);
 
         try (Scanner scEntrada = new Scanner(entradaFile);
              BufferedWriter bw = new BufferedWriter(new FileWriter(nomeSaida))) {
@@ -25,7 +25,7 @@ public class Main {
             while (scEntrada.hasNextLine()) {
                 String palavra = scEntrada.nextLine().trim();
                 if (palavra.isEmpty()) continue;
-                System.out.println("começou");
+
                 boolean aceita = maquina.testar(palavra);
 
                 // Escrever a fita final no arquivo

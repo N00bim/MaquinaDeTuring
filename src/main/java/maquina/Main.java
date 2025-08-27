@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         if (args.length < 2) {
             System.out.println("Uso: java Main <arquivo_maquina.json> <arquivo_entrada.in>");
-            //return;
+            return;
         }
 
         String json = args[0];

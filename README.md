@@ -12,5 +12,5 @@ javac -cp "libs/*" *.java
 
 ## 2. Executar o programa
 ```bash
-java -cp ".;libs/*" Main arquivo_maquina.json arquivo_entrada.in
+java -cp ".;libs/*" Main.java arquivo_maquina.json arquivo_entrada.in
 ```
